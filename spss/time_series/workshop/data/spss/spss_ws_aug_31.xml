@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TSCXML
+	xmlns="http://www.ibm.com/software/analytics/spss/xml/components/time-series"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ibm.com/software/analytics/spss/xml/components/time-series www.ibm.com/software/analytics/spss/xml/components/time-series-1.0.xsd">
+	<Header>
+		<Application
+			name="IBM SPSS Statistics"
+			version="21.0.0.0"/>
+	</Header>
+	<DataDictionary>
+		<DateSpecification
+			dateSpecID="1"
+			dateSpecDescriptor="Date specification derived from Statistics time-series date variables">
+			<Periods>
+				<Year
+					firstCaseIndex="2015"/>
+				<Month
+					cycleLength="12"
+					firstCaseIndex="0"/>
+			</Periods>
+		</DateSpecification>
+	</DataDictionary>
+	<ExpSmoothingModel
+		modelName="Model_1"
+		modelDescriptor="sales_SSeasonal"
+		variableID="sales"
+		dateSpecID="1">
+		<ESSimpleSeasonal
+			seasonLength="12">
+			<ParmLevel>
+				<EstimatedParameter>0.00101324019332029 0.0323154334918817</EstimatedParameter>
+			</ParmLevel>
+			<ParmSeason>
+				<EstimatedParameter>1.47135737273874e-006 0.24082753683541</EstimatedParameter>
+			</ParmSeason>
+			<StateLevel>76.0262454530274</StateLevel>
+			<StateSeason
+				phase="6">-36.70956298281 -28.3082110226773 -7.89523428660933 46.5259993529836 9.33026246760394 -1.16795682714335 12.7903133041229 0.934668746422741 -31.7149602274455 6.84504306438614 2.42435164168177 36.0568893540165</StateSeason>
+		</ESSimpleSeasonal>
+		<EstimationInfo
+			periodStartIndex="0"
+			periodLength="30"
+			degreesOfFreedom="28">
+			<Statistic
+				type="errVariance">2490.01082032604</Statistic>
+			<Statistic
+				type="meanSqrErr">2490.01082032604</Statistic>
+			<Statistic
+				type="rootMeanSqrErr">49.9000082196992</Statistic>
+			<Statistic
+				type="meanAbsPctErr">239.49111229051</Statistic>
+			<Statistic
+				type="meanAbsErr">41.101694315378</Statistic>
+			<Statistic
+				type="maxAbsPctErr">1594.74825764776</Statistic>
+			<Statistic
+				type="maxAbsErr">107.675764627684</Statistic>
+			<Statistic
+				type="rSqr">0.197218139113669</Statistic>
+			<Statistic
+				type="normBayesIC">8.04678882707259</Statistic>
+			<Statistic
+				type="logLikelihood">-158.833897948263</Statistic>
+			<Statistic
+				type="akaikeIC">321.667795896525</Statistic>
+			<Statistic
+				type="bayesIC">324.470190659849</Statistic>
+			<Statistic
+				type="stationaryRSqr">0.897007302680627</Statistic>
+			<LjungBoxStatistic
+				k="18"
+				degreesOfFreedom="16"
+				pValue="0.00360037995986682">35.3128853757655</LjungBoxStatistic>
+		</EstimationInfo>
+	</ExpSmoothingModel>
+</TSCXML>

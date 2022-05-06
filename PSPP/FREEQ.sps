@@ -1,0 +1,29 @@
+INPUT PROGRAM. 
+LOOP #I = 1 TO 100. 
+VECTOR X(5). 
+LOOP #J = 1 TO 10. 
+COMPUTE X(#J) = TRUNC(RV.UNIFORM(0, 5)). 
+END LOOP. 
+END CASE. 
+END LOOP. 
+END FILE. 
+END INPUT PROGRAM. 
+EXECUTE. 
+
+VALUE LABELS X1
+1 "Highly Statisfied"
+2 "Satisfied" 
+3 "Indifferent"
+4 "Dissatisfied" 
+5 "Highly Dissatisfied". 
+EXECUTE. 
+
+FREQ X1. 
+EXECUTE. 
+
+FREQUENCIES
+	/VARIABLES= X1
+	/HISTOGRAM=NORMAL
+	/PIECHART=. 
+	/BARCHART=.
+

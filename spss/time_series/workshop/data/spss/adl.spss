@@ -1,0 +1,45 @@
+TITLE 'A sample demo of data processing.'
+
+
+** Effect of new therapy following heart stroke on 100 women.  **
+   The first group was submitted to standard treatment while   **
+   the second group was assigned to emotional therapy.         **
+   Three months after treatment, capabilities of each patient  **
+   to perform the ordinary tasks of daily living were recorded **
+   as ordinal variables.                                       **.
+
+** chargement du fichier **.
+GET FILE=adl.sav
+  /DROP=id gender.
+
+** display the first 6 observations **.
+LIST
+  /CASES= FROM 1 TO 6.
+
+** one-way frequency tables **.
+FREQ group diabetic
+  /STAT=NONE.
+
+** age distribution, as frequency **.
+EXAMINE age
+  /STAT=DESCRIPTIVES
+  /PLOT=HISTOGRAM
+  /PERCENT.
+
+** distribution of age and los conditional on group **.
+EXAMINE age los BY group
+  /STAT=EXTREME
+  /PLOT=BOXPLOT
+  /COMPARE=GROUPS
+  /NOTOTAL
+  /PERCENT.
+
+** two-way tables of hypertension by group **.
+CROSSTABS 
+  /TABLES=hypertns BY group
+  /CELLS=COUNT COLUMN EXPECTED 
+  /STATISTICS.
+
+** independent t-test for los by group **.
+T-TEST GROUPS=group(0,1)
+  /VARIABLE=los.

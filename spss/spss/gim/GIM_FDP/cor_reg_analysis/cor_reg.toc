@@ -1,0 +1,12 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Bivariate Correlation}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Correlation coefficient}{7}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{1}{Cos $\theta $}{9}{0}{1}
+\beamer@subsubsectionintoc {1}{1}{2}{Karl Pearson's r}{10}{0}{1}
+\beamer@subsectionintoc {1}{2}{Significance test}{12}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{1}{Spearman's rank correlation}{13}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{2}{Kendall's $\tau $}{15}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{3}{Significance Test}{17}{0}{1}
+\beamer@subsubsectionintoc {1}{2}{4}{Goodman and Kruskal's $\gamma $}{18}{0}{1}
+\beamer@sectionintoc {2}{Canonical Correlation}{19}{0}{2}
+\beamer@subsubsectionintoc {2}{0}{1}{CCA - Methodology}{20}{0}{2}

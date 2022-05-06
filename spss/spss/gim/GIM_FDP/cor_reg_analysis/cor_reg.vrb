@@ -1,0 +1,14 @@
+\frametitle{CCA in SPSS}
+\centering
+	There is no GUI based process in SPSS for CCA or DCA. Got to you use \underline{Syntax Window}.
+\vspace{1cm}
+
+\begin{tabular}{|p{10cm}}
+	\begin{verbatim}
+	manova x1 to x6
+	/discrim all
+	/print = sig(eig dim).
+	execute.
+	\end{verbatim}
+\end{tabular}
+
